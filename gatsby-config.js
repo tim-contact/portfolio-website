@@ -4,13 +4,13 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Krzysztof Pantak Portfolio`,
-    titleTemplate: `%s | Krzysztof Pantak Portfolio`,
-    description: `Terminal -command-line themed portfolio featuring projects ranging from robust Gatsby PWA's, React APPs and FullStack Web APPs utilizing cloud platforms to simple HTML, CSS and JavaScript sites.`,
-    author: `@KrzysztofPantak`,
-    url: "https://pantak.net",
+    title: `Timothy Sahan Portfolio`,
+    titleTemplate: `%s | Timothy Sahan Portfolio`,
+    description: `Terminal -command-line themed portfolio featuring projects of a Software Engineering Student from Sri Lanka.`,
+    author: `@Timothy Sahan`,
+    url: "https://tim-contact.online",
     image: "/PortfolioSS-sm.png", // Path to your image you placed in the 'static' folder
-    twitterUsername: "@KrzysztofPantak",
+    twitterUsername: "",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,8 +27,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Krzysztof Pantak Portfolio`,
-        short_name: `Krzysztof Pantak Portfolio`,
+        name: `Timothy Sahan Portfolio`,
+        short_name: `Timothy Sahan Portfolio`,
         start_url: `/`,
         background_color: `#1b2d3a`,
         theme_color: `#1b2d3a`,
@@ -48,15 +48,6 @@ module.exports = {
       options: {
         name: `markdown-pages`,
         path: `${__dirname}/src/markdown-pages/projects`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          process.env.GATSBY_GOOGLE_GTAG, // Google Analytics / GA
-        ],
       },
     },
     `gatsby-transformer-remark`,

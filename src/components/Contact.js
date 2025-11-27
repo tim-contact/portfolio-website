@@ -12,13 +12,18 @@ export default function Contact({ close }) {
     setState({ ...state, [e.target.name]: e.target.value })
   }
 
+  const encode = data =>
+    Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+
   const handleSubmit = e => {
     e.preventDefault()
     setMessageSending(true)
-    const url = `/.netlify/functions/contact`
-    fetch(url, {
+    fetch("/", {
       method: "POST",
-      body: JSON.stringify(state),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...state }),
     })
       .then(response => {
         response.ok
@@ -27,6 +32,10 @@ export default function Contact({ close }) {
         setMessageSending(false)
       })
       .then(close)
+      .catch(() => {
+        alert("An error occured while trying to send contact message!")
+        setMessageSending(false)
+      })
   }
 
   return (
@@ -44,8 +53,15 @@ export default function Contact({ close }) {
             }}
           />
         </h1>
-        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/contact-us">
-            <input type="hidden" name="form-name" value="contact" />
+        <form
+          name="contact"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          action="/success"
+          onSubmit={handleSubmit}
+        >
+          <input type="hidden" name="form-name" value="contact" />
           <p hidden>
             <label>
               Don’t fill this out:{" "}
