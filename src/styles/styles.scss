@@ -1,34 +1,24 @@
 :root {
-  --primaryText: #ffc600;
-  --secondaryText: #ccc;
-  --linkText: #047be3;
-  --bg: #1b2d3a;
-  --windowBg: #193549;
-  --focusBg: hsl(205, 51%, 16%);
-  --borderColor: black;
-  --windowBackgroundImageColor: rgba(25,45,58,0.95);  
+  --primaryText: #00ff41;
+  --secondaryText: #00d936;
+  --linkText: #00ff88;
+  --bg: #0a0e0a;
+  --windowBg: #0d1b0d;
+  --focusBg: #0f2b0f;
+  --borderColor: #001a00;
+  --windowBackgroundImageColor: rgba(13, 27, 13, 0.95);  
   --blurRadius: 13px;
 }
 
-/* .light {
-  --primaryText: #be100e;
-  --secondaryText: #20111b;
-  --linkText: #047be3;
-  --bg: #b9b8ab;
-  --windowBg: #d5ccba;
-  --focusBg: #c7bbae;
-  --borderColor: #94897e;
-} */
-
 .light {
-  --primaryText: #268bd2;
-  --secondaryText: #586e75;
-  --linkText: #dc322f;
-  --bg: #eee8d5;
-  --windowBg: #fdf6e3;
-  --focusBg: #eee8d5;
-  --borderColor: #94897e;
-  --windowBackgroundImageColor: rgba(238,232,213,0.8); 
+  --primaryText: #00a82d;
+  --secondaryText: #1a3d1a;
+  --linkText: #00ff41;
+  --bg: #e8f5e8;
+  --windowBg: #f0fdf0;
+  --focusBg: #e1f7e1;
+  --borderColor: #7a9d7a;
+  --windowBackgroundImageColor: rgba(240, 253, 240, 0.8); 
   --blurRadius: 30px;
 }
 
@@ -68,6 +58,7 @@ h1 {
   font-size: 50px;
   letter-spacing: -2px;
   transition: color 0.4s ease-in-out;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
 }
 
 h2 {
@@ -88,6 +79,11 @@ ul {
 a {
   color: var(--primaryText);
   text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.6);
 }
 
 p {
@@ -118,7 +114,7 @@ p {
   display: none;
 }
 
-//Responsive font sizes
+/* Responsive font sizes */
 @media (max-width: 1200px) {
   legend {
     font-size: calc(1.275rem + 0.3vw);
@@ -160,7 +156,6 @@ p {
   h1 {
     font-size: calc(1.375rem + 0.5vw);
   }
-
   h3 {
     font-size: calc(1rem + 0.6vw);
   }
@@ -181,8 +176,8 @@ p {
   padding: 5px;
   border-radius: 6px;
   transition: background-color 0.4s ease-in-out;
-
-  /* Position the tooltip text - see examples below! */
+  border: 1px solid var(--primaryText);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
   position: absolute;
   bottom: 125%;
   left: 50%;
@@ -210,8 +205,7 @@ footer > a:hover {
   color: var(--linkText);
 }
 
-//REACT TOGGLE
-
+/* REACT TOGGLE */
 .react-toggle-track-x {
   bottom: 8px !important;
   right: 12px !important;
@@ -230,6 +224,7 @@ footer > a:hover {
 .react-toggle--checked {
   color: var(--primaryText) !important;
 }
+
 .react-toggle--checked .react-toggle-track {
   background-color: var(--windowBg) !important;
 }
