@@ -9,7 +9,7 @@ popupImageSrc: ""
 popupImageAlt: "Seed Marketplace screenshot"
 popupLiveLink: ""
 popupGithubLink: ""
-techIcons: ["nextjs", "javascript", "postgresql"]
+techIcons: ["nextdotjs", "javascript", "postgresql"]
 ---
 
 This project is a full-stack online marketplace where users can buy and sell cultivated seeds.  

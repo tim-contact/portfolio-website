@@ -9,7 +9,7 @@ popupImageSrc: ""
 popupImageAlt: "Unveil App screenshot"
 popupLiveLink: ""
 popupGithubLink: ""
-techIcons: ["flutter", "firebase", "nodejs", "javascript", "postgresql"]
+techIcons: ["flutter", "firebase", "nodedotjs", "javascript", "postgresql"]
 ---
 
 Unveil is a full-stack **event discovery and management platform** that lets users find, save, and explore events happening around them.  

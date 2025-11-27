@@ -9,7 +9,7 @@ popupImageSrc: ""
 popupImageAlt: "Medical Inventory System screenshot"
 popupLiveLink: ""
 popupGithubLink: ""
-techIcons: ["javascript", "nodejs", "postgresql"]
+techIcons: ["javascript", "nodedotjs", "postgresql"]
 ---
 
 This project is a **medical inventory management platform** developed as a group assignment.  
