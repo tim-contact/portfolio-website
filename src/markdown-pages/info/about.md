@@ -3,7 +3,7 @@ slug: "about"
 video: "false"
 listName: "👨‍💻 /About"
 title: "About me"
-popupImageSrc: "mojephoto.jpg"
+popupImageSrc: "my_avatar.png"
 popupImageAlt: "Cartoon photo of myself"
 popupGithubLink: "https://github.com/tim-contact"
 techIcons: [
