@@ -1,1 +1,6 @@
----\ntitle: Info\n---\n\nContent
+---
+slug: "info"
+title: "Info"
+---
+
+Content
