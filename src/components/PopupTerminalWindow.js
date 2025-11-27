@@ -78,8 +78,8 @@ export default function PopupTerminalWindow({
             <video
               height="100%"
               width="100%"
-              controls
-              autoplay
+              controls={false}
+              autoPlay
               muted
               loop
               playsinline
